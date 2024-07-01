@@ -2,35 +2,35 @@
     <thead>
         <tr> 
             <td colspan="3"> 
-                <p></p>
+                <p>{{ operation }}</p> <!-- This is where all the inputs go -->
             </td> 
-            <td><input type="button" value="c" class="btn btn-outline-success"></td> 
+            <td><input type="button" value="c" class="btn btn-outline-success" (click)="clear()"></td> 
         </tr> 
     </thead>
     <tbody>
         <tr> 
-            <td><input type="button" value="1" class="btn btn-outline-success" (onclick)="inputReceive($event)"></td> 
-            <td><input type="button" value="2" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="3" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="/" class="btn btn-outline-success"></td> 
+            <td><input type="button" value="1" class="btn btn-outline-success" (click)="numInput('1')" /></td> 
+            <td><input type="button" value="2" class="btn btn-outline-success" (click)="numInput('2')"></td> 
+            <td><input type="button" value="3" class="btn btn-outline-success" (click)="numInput('3')"></td> 
+            <td><input type="button" value="/" class="btn btn-outline-success" (click)="numInput('/')"></td> 
         </tr> 
         <tr> 
-            <td><input type="button" value="4" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="5" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="6" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="*" class="btn btn-outline-success"></td> 
+            <td><input type="button" value="4" class="btn btn-outline-success" (click)="numInput('4')"></td> 
+            <td><input type="button" value="5" class="btn btn-outline-success" (click)="numInput('5')"></td> 
+            <td><input type="button" value="6" class="btn btn-outline-success" (click)="numInput('6')"></td> 
+            <td><input type="button" value="*" class="btn btn-outline-success" (click)="numInput('*')"></td> 
         </tr> 
         <tr> 
-            <td><input type="button" value="7" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="8" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="9" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="-" class="btn btn-outline-success"></td> 
+            <td><input type="button" value="7" class="btn btn-outline-success" (click)="numInput('7')"></td> 
+            <td><input type="button" value="8" class="btn btn-outline-success" (click)="numInput('8')"></td> 
+            <td><input type="button" value="9" class="btn btn-outline-success" (click)="numInput('9')"></td> 
+            <td><input type="button" value="-" class="btn btn-outline-success" (click)="numInput('-')"></td> 
         </tr> 
         <tr> 
-            <td><input type="button" value="0" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="." class="btn btn-outline-success"></td> 
-            <td><input type="button" value="=" class="btn btn-outline-success"></td> 
-            <td><input type="button" value="+" class="btn btn-outline-success"></td> 
+            <td><input type="button" value="0" class="btn btn-outline-success" (click)="numInput('0')"></td> 
+            <td><input type="button" value="." class="btn btn-outline-success" (click)="numInput('.')"></td> 
+            <td><input type="button" value="=" class="btn btn-outline-success" (click)="operationComplete(operation)"></td> 
+            <td><input type="button" value="+" class="btn btn-outline-success" (click)="numInput('+')"></td> 
         </tr> 
     </tbody>
 </table>
